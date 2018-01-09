@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_MAIL</CLSNAME>
+    <VERSION>1</VERSION>
+    <LANGU>F</LANGU>
+    <DESCRIPT>Classe de mail principale</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <CLSABSTRCT>X</CLSABSTRCT>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <RSTAT>K</RSTAT>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>ADD_ATTACHMENTS</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Ajout des pièces jointes</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>ADD_RECIPIENTS</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Ajoute les destinataires au mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_ATTACHMENTS</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Détermination des PJ</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_BODY</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Construction du corps de mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_CONTENT</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Génération du corps de mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_FOOTER</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Ferme le mail html</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_HEADER</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Génère l&apos;entête de mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_RECIPIENTS</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Détermination des destinataires</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_SUBJECT</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Construction de l&apos;objet du mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>GENERATE_BUTTON</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Génère un bouton html</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>GO_SEND_REQUEST</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Business Communication Service</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>GO_UNIQUE_INSTANCE</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Classe de mail principale</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>GV_DOC_TYP</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Type de mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>GV_LANGU</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Langue du mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>GV_SENDER_UNAME</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Uname de l&apos;expéditeur</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>INIT_DOC_TYP</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Initialisation du type de document</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>ITAB_TO_HTML</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Converti une table interne en tableau html</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>READ_TEXT</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Récupération d&apos;un texte SO10 et remplacement des variables</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>SEND</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Envoi du mail généré</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
