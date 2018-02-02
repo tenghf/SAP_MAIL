@@ -66,9 +66,21 @@
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_SIGNATURE</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Construction de la signature du mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
      <CMPNAME>BUILD_SUBJECT</CMPNAME>
      <LANGU>F</LANGU>
      <DESCRIPT>Construction de l&apos;objet du mail</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_MAIL</CLSNAME>
+     <CMPNAME>BUILD_TITLE</CMPNAME>
+     <LANGU>F</LANGU>
+     <DESCRIPT>Construction du titre du corps de mail</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZCL_MAIL</CLSNAME>
@@ -87,12 +99,6 @@
      <CMPNAME>GO_SEND_REQUEST</CMPNAME>
      <LANGU>F</LANGU>
      <DESCRIPT>Business Communication Service</DESCRIPT>
-    </SEOCOMPOTX>
-    <SEOCOMPOTX>
-     <CLSNAME>ZCL_MAIL</CLSNAME>
-     <CMPNAME>GO_UNIQUE_INSTANCE</CMPNAME>
-     <LANGU>F</LANGU>
-     <DESCRIPT>Classe de mail principale</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CLSNAME>ZCL_MAIL</CLSNAME>

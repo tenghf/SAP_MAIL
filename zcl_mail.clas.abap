@@ -6,8 +6,6 @@ class ZCL_MAIL definition
   "GLOBAL FRIENDS zcl_mail_demo.
 public section.
 
-  class-data GO_UNIQUE_INSTANCE type ref to ZCL_MAIL .
-
   methods CONSTRUCTOR
     raising
       CX_SEND_REQ_BCS .
@@ -96,7 +94,6 @@ private section.
   methods BUILD_HEADER
     returning
       value(RV_HEADER) type STRING .
-  methods ALERT_HOTLINE .
 ENDCLASS.
 
 
@@ -187,11 +184,6 @@ CLASS ZCL_MAIL IMPLEMENTATION.
   ENDMETHOD.
 
 
-  METHOD alert_hotline.
-
-  ENDMETHOD.
-
-
   METHOD build_content.
     " Mail content
     rv_content = build_header( ) && build_body( ) && build_footer( ).
@@ -226,48 +218,51 @@ CLASS ZCL_MAIL IMPLEMENTATION.
 
 
   METHOD itab_to_html.
-    DATA: ls_fcat   TYPE lvc_s_fcat,
-          lt_header TYPE STANDARD TABLE OF w3head,   "Header
-          lt_field  TYPE STANDARD TABLE OF w3fields, "Fields
-          lt_html   TYPE STANDARD TABLE OF w3html,   "Html
-          ls_head   TYPE w3head.
 
-    FIELD-SYMBOLS: <lt_data> TYPE STANDARD TABLE.
-    ASSIGN it_data->* TO <lt_data>.
+    " To be developped - WWW_ITAB_TO_HTML deprecated !
 
-    " Fill the Column headings and Properties
-    LOOP AT it_fcat INTO ls_fcat.
-      "--> Init column name
-      ls_head-text = ls_fcat-coltext.
-
-      "--> Populate the Column Headings
-      CALL FUNCTION 'WWW_ITAB_TO_HTML_HEADERS'
-        EXPORTING
-          field_nr = sy-tabix
-          text     = ls_head-text
-          fgcolor  = 'black'
-          bgcolor  = 'blue'
-        TABLES
-          header   = lt_header.
-
-      "--> Populate Column Properties
-      CALL FUNCTION 'WWW_ITAB_TO_HTML_LAYOUT'
-        EXPORTING
-          field_nr = sy-tabix
-          fgcolor  = 'black'
-          size     = '3'
-        TABLES
-          fields   = lt_field.
-    ENDLOOP.
-
-    " Preparing the HTML from Intenal Table
-    REFRESH lt_html.
-    CALL FUNCTION 'WWW_ITAB_TO_HTML'
-      TABLES
-        html       = lt_html
-        fields     = lt_field
-        row_header = lt_header
-        itable     = <lt_data>.
+*    DATA: ls_fcat   TYPE lvc_s_fcat,
+*          lt_header TYPE STANDARD TABLE OF w3head,   "Header
+*          lt_field  TYPE STANDARD TABLE OF w3fields, "Fields
+*          lt_html   TYPE STANDARD TABLE OF w3html,   "Html
+*          ls_head   TYPE w3head.
+*
+*    FIELD-SYMBOLS: <lt_data> TYPE STANDARD TABLE.
+*    ASSIGN it_data->* TO <lt_data>.
+*
+*    " Fill the Column headings and Properties
+*    LOOP AT it_fcat INTO ls_fcat.
+*      "--> Init column name
+*      ls_head-text = ls_fcat-coltext.
+*
+*      "--> Populate the Column Headings
+*      CALL FUNCTION 'WWW_ITAB_TO_HTML_HEADERS'
+*        EXPORTING
+*          field_nr = sy-tabix
+*          text     = ls_head-text
+*          fgcolor  = 'black'
+*          bgcolor  = 'blue'
+*        TABLES
+*          header   = lt_header.
+*
+*      "--> Populate Column Properties
+*      CALL FUNCTION 'WWW_ITAB_TO_HTML_LAYOUT'
+*        EXPORTING
+*          field_nr = sy-tabix
+*          fgcolor  = 'black'
+*          size     = '3'
+*        TABLES
+*          fields   = lt_field.
+*    ENDLOOP.
+*
+*    " Preparing the HTML from Intenal Table
+*    REFRESH lt_html.
+*    CALL FUNCTION 'WWW_ITAB_TO_HTML'
+*      TABLES
+*        html       = lt_html
+*        fields     = lt_field
+*        row_header = lt_header
+*        itable     = <lt_data>.
   ENDMETHOD.
 
 
@@ -329,6 +324,9 @@ CLASS ZCL_MAIL IMPLEMENTATION.
 
 
   METHOD send.
+    " Debug loop
+    zcl_tools=>debug_loop( 'DEBUG.MAIL.OUT' ).
+
     " Init sender
     set_sender( ).
 
